@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Giao diện cửa hàng thời trang mẫu, xây dựng bằng HTML5 và CSS3.">
+  <title>Coolmate Studio | Cửa hàng thời trang</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Coolmate Studio - Trang chủ">
+        <span class="brand-mark">C</span>
+        <span>coolmate<span class="brand-light"> studio</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a href="#san-pham">Sản phẩm</a>
+        <a href="#uu-diem">Về chúng tôi</a>
+      </nav>
+      <button class="cart-button" type="button" aria-label="Số sản phẩm trong giỏ">
+        Giỏ hàng <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">BỘ SƯU TẬP MỚI</p>
+        <h1>Mặc thoải mái.<br><span>Sống chất riêng.</span></h1>
+        <p class="hero-description">Những món đồ cơ bản, dễ phối và phù hợp với nhịp sống mỗi ngày.</p>
+        <a class="button button-primary hero-button" href="#san-pham">Khám phá sản phẩm <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <span class="deco-circle"></span>
+        <span class="deco-label">DAILY<br>ESSENTIALS</span>
+      </div>
+    </section>
+
+    <section class="product-section container" id="san-pham">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LỰA CHỌN CỦA BẠN</p>
+          <h2>Sản phẩm nổi bật</h2>
+          <p class="section-description">Một vài sản phẩm mẫu để minh họa bố cục cửa hàng.</p>
+        </div>
+        <span class="product-total">04 sản phẩm</span>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <a class="product-image image-sand" href="#ao-thun" aria-label="Xem Áo thun Cotton Everyday">
+            <span class="product-badge">BÁN CHẠY</span>
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85" alt="Áo thun cotton màu sáng" loading="lazy">
+          </a>
+          <div class="product-info">
+            <p class="product-category">ÁO THUN</p>
+            <h3 id="ao-thun">Áo thun Cotton Everyday</h3>
+            <div class="product-bottom">
+              <p class="product-price">199.000đ <span class="old-price">249.000đ</span></p>
+              <button class="button button-outline add-to-cart" type="button" data-product="Áo thun Cotton Everyday">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a class="product-image image-blue" href="#ao-khoac" aria-label="Xem Áo khoác gió Active">
+            <span class="product-badge badge-new">MỚI</span>
+            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=85" alt="Áo khoác thời trang" loading="lazy">
+          </a>
+          <div class="product-info">
+            <p class="product-category">ÁO KHOÁC</p>
+            <h3 id="ao-khoac">Áo khoác gió Active</h3>
+            <div class="product-bottom">
+              <p class="product-price">459.000đ</p>
+              <button class="button button-outline add-to-cart" type="button" data-product="Áo khoác gió Active">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a class="product-image image-green" href="#quan-short" aria-label="Xem Quần short Daily Move">
+            <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=900&q=85" alt="Quần short phong cách thường ngày" loading="lazy">
+          </a>
+          <div class="product-info">
+            <p class="product-category">QUẦN SHORT</p>
+            <h3 id="quan-short">Quần short Daily Move</h3>
+            <div class="product-bottom">
+              <p class="product-price">229.000đ</p>
+              <button class="button button-outline add-to-cart" type="button" data-product="Quần short Daily Move">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a class="product-image image-lilac" href="#ao-phao" aria-label="Xem Áo phao Ultrawarm Gile">
+            <span class="product-badge">GIỮ ẤM</span>
+            <img src="https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&w=900&q=85" alt="Áo khoác ngoài trời" loading="lazy">
+          </a>
+          <div class="product-info">
+            <p class="product-category">ÁO PHAO</p>
+            <h3 id="ao-phao">Áo phao Ultrawarm Gile</h3>
+            <div class="product-bottom">
+              <p class="product-price">699.000đ</p>
+              <button class="button button-outline add-to-cart" type="button" data-product="Áo phao Ultrawarm Gile">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="benefits" id="uu-diem">
+      <div class="container benefits-grid">
+        <div class="benefit-item">
+          <span class="benefit-icon" aria-hidden="true">↗</span>
+          <div><h3>Dễ phối đồ</h3><p>Thiết kế tối giản, dùng được trong nhiều hoàn cảnh.</p></div>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon" aria-hidden="true">♡</span>
+          <div><h3>Ưu tiên thoải mái</h3><p>Chọn trang phục phù hợp cho sinh hoạt hằng ngày.</p></div>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon" aria-hidden="true">✓</span>
+          <div><h3>Mua sắm rõ ràng</h3><p>Thông tin sản phẩm và giá được trình bày dễ nhìn.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#"><span class="brand-mark">C</span><span>coolmate<span class="brand-light"> studio</span></span></a>
+      <p>Giao diện minh họa phục vụ bài tập HTML5 và CSS3.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
