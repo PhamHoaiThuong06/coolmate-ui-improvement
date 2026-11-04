@@ -443,3 +443,282 @@ button { font: inherit; }
 .btn-add-to-cart {
   margin-top: auto;
 }
+.product-card {
+    border: 1px solid #d7e3da;
+    border-radius: 18px;
+}
+
+/* =============================================
+   BUOI 2 - BUOC 4: CSS SELECTOR VA BOX MODEL
+   Cai tien gia, nut mua va khoang cach san pham
+   ============================================= */
+
+/* Dieu chinh khoang cach khung thong tin */
+.product-info {
+    padding: 16px 15px 15px;
+}
+
+    /* Thu hep khoang cach giua ten va gia */
+    .product-info h3 {
+        min-height: 42px;
+        margin: 0;
+    }
+
+/* Giam khoang cach giua cac thanh phan */
+.product-bottom {
+    margin-top: 6px;
+    gap: 10px;
+}
+
+/* Lam noi bat gia ban */
+.product-price {
+    color: #137a46;
+    font-size: 1.3rem;
+    font-weight: 850;
+    line-height: 1.3;
+}
+
+/* Giu gia goc nho va de phan biet */
+.old-price {
+    color: #89928c;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+/* Nut Them vao gio mau xanh */
+.product-card .add-to-cart {
+    background: #176b45;
+    color: #ffffff;
+    border: 1px solid #176b45;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-weight: 700;
+}
+
+    /* Hieu ung hover */
+    .product-card .add-to-cart:hover {
+        background: #105437;
+        border-color: #105437;
+        color: #ffffff;
+    }
+
+    /* Trang thai focus cho ban phim */
+    .product-card .add-to-cart:focus-visible {
+        outline: 3px solid #91c6a9;
+        outline-offset: 3px;
+    }
+
+/* Giu giao dien gon tren dien thoai */
+@media (max-width: 640px) {
+    .product-info {
+        padding: 12px 10px 11px;
+    }
+
+        .product-info h3 {
+            min-height: 38px;
+        }
+
+    .product-bottom {
+        margin-top: 6px;
+        gap: 8px;
+    }
+
+    .product-price {
+        font-size: 1.05rem;
+    }
+
+    .product-card .add-to-cart {
+        padding: 9px 6px;
+        font-size: 0.76rem;
+    }
+}
+/* ======================================
+   BUOI 2 - BUOC 5: FLEXBOX
+   Cai tien thanh dieu huong
+   ====================================== */
+
+/* Can chinh logo, menu va gio hang */
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Sap xep cac muc menu tren cung mot hang */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+
+/* Giu logo va gio hang khong bi co hep */
+.header-inner .brand,
+.header-inner .cart-button {
+    flex-shrink: 0;
+}
+
+/* Can giua noi dung ben trong nut gio hang */
+.cart-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Dieu chinh khoang cach tren man hinh nho */
+@media (max-width: 640px) {
+    .header-inner {
+        gap: 10px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+}
+/* =========================================
+   BUOI 2 - BO CUC SAN PHAM BANG CSS GRID
+   2 san pham moi hang, khoang cach rong hon
+   ========================================= */
+
+/* Man hinh may tinh: 2 cot */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 36px;
+    row-gap: 40px;
+}
+
+/* Man hinh dien thoai: 1 cot */
+@media (max-width: 640px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 24px;
+    }
+}
+/* ========================================
+   BUOI 2 - BUOC 5: CAN GIUA BANG FLEXBOX
+   ======================================== */
+
+/* Can giua toan bo thong tin san pham */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+    /* Can giua loai va ten san pham */
+    .product-category,
+    .product-info h3 {
+        text-align: center;
+    }
+
+/* Can giua gia ban va nut mua */
+.product-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+/* Can giua gia ban */
+.product-price {
+    text-align: center;
+}
+
+/* Can giua chu ben trong nut mua */
+.product-bottom .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+/* Giu noi dung can giua tren dien thoai */
+@media (max-width: 640px) {
+    .product-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ==========================================
+   BUOI 2 - BUOC 7: HOVER VA FOCUS
+   Hieu ung nut Them vao gio
+   ========================================== */
+
+/* Trang thai binh thuong: nut mau xanh */
+.product-card .add-to-cart {
+    background-color: #176b45;
+    color: #ffffff;
+    border: 2px solid #176b45;
+    border-radius: 10px;
+    cursor: pointer;
+    /* Tao chuyen dong muot */
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    /* Dua chuot vao: doi mau do va noi len */
+    .product-card .add-to-cart:hover {
+        background-color: #dc2626;
+        border-color: #dc2626;
+        color: #ffffff;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(220, 38, 38, 0.30);
+    }
+
+    /* Nhan chuot: nut ha xuong nhe */
+    .product-card .add-to-cart:active {
+        transform: translateY(-1px);
+    }
+
+    /* Dung ban phim Tab: hien vien focus */
+    .product-card .add-to-cart:focus-visible {
+        outline: 3px solid #f59e0b;
+        outline-offset: 4px;
+    }
+
+/* Giam chuyen dong khi nguoi dung yeu cau */
+@media (prefers-reduced-motion: reduce) {
+    .product-card .add-to-cart {
+        transition: none;
+    }
+}
+
+/* BUOI 2 - BUOC 8: TU SUA MENU MOBILE */
+
+@media (max-width: 640px) {
+
+    /* Cho phep header xuong dong */
+    .header-inner {
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+
+    /* Hien lai menu o hang thu hai */
+    .main-nav {
+        display: flex;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 24px;
+        padding-bottom: 12px;
+    }
+
+        /* Dieu chinh chu menu tren dien thoai */
+        .main-nav a {
+            font-size: 0.85rem;
+        }
+}
+
+
